@@ -5,6 +5,16 @@
  
  */
 
+func fib (n :Int) {
+    var fibs: [Int] = [1, 1]
+    (2...n).forEach {
+        i in fibs.append(fibs[i - 1] + fibs[i - 2])
+    }
+    print(fibs)
+}
+
+fib(n: 6)
+
 
 
 /*:
@@ -21,6 +31,11 @@
  >   - It may be helpful to look at the mathematical formula for the nth number in the sequence, which is `F(n) = F(n-1) + F(n-2)`.
  */
 
+func rec_fib(n: Int) -> Int {
+    return n < 2 ? n : (rec_fib(n: n-1) + rec_fib(n: n-2))
+}
+
+rec_fib(n: 6)
 
 /*:
  ## Bonus 2: Fibonacci App
