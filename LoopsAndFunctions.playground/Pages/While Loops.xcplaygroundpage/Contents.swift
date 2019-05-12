@@ -6,5 +6,16 @@ import Foundation
  */
 
 
+var notOne: Bool = true
+
+while notOne {
+    let rand = Int(arc4random_uniform(6) + 1)
+    if (rand != 1) {
+        print(rand)
+    } else {
+        print(rand)
+        notOne = !notOne
+    }
+}
 
 //: [Previous](@previous)  |  page 2 of 6  |  [Next: Functions](@next)
